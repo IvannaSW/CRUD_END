@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+  head
+    title Form about student
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet')
+  body
+    | Введіть дані про студента.
+    form(action='/data', method='POST')
+      input(type='text', placeholder='Id', name='id')
+      input(type='text', placeholder='Name', name='name')
+      input(type='text', placeholder='Surname', name='surname')
+      input(type='text', placeholder='Age', name='age')
+      button(type='submit') Submit
+    a(href='/') Back

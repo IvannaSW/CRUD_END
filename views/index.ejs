@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  Введіть id, ім'я, прізвище, вік
+
+  <ul class="data">
+  <% for(var i=0; i<data.length; i++) {%>
+    <li class="data2">
+      <span><%= data[i].id %></span>
+      <span><%= data[i].name %></span>
+      <span><%= data[i].surname %></span>
+      <span><%= data[i].age %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/data" method="POST">
+    <input type="text" placeholder="id" name="id">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="surname" name="surname">
+    <input type="text" placeholder="age" name="age">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
